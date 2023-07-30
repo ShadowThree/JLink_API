@@ -2,7 +2,8 @@
 1. [pylink官方文档](https://pylink.readthedocs.io/en/latest/index.html)
 2. [pylink博客](https://blog.csdn.net/qq_29506411/article/details/128028590?spm=1001.2014.3001.5501)
 3. 在安装[JLink-tools](https://www.segger.com/downloads/jlink/)的路径下可以获取到开发过程中需要使用的`JLink_x64.dll`和`JLinkARM.dll`库文件;
-4. [UM08002](https://www.scribd.com/document/447972596/UM08002-JLinkDLL-pdf)
+4. [UM08002](https://www.scribd.com/document/447972596/UM08002-JLinkDLL-pdf);
+5. [python-JLINK博客](https://www.linmingjie.cn/index.php/archives/108/)
 
 ## 问题及措施步骤
 1. 目标：想要一个能带时间戳的RTT日志输出

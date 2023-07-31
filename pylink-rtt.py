@@ -22,6 +22,11 @@ def get_time(with_ms):
     """
     return current time
         with_ms=1   return format: "20230731 08:19:55.265"
+        with_ms=0   return format: "20230731_081955"
+    """
+    time = ""
+    if with_ms:
+        time =  datetime.utcnow().strftime('%Y%m%d %H:%M:%S.%f')[:-3]   # "20230731 08:19:55.265"
     else:
         time =  datetime.utcnow().strftime('%Y%m%d_%H%M%S')             # "20230731_081955"
     return time

@@ -18,7 +18,9 @@
 ![MinGW-w64下载](./img/MinGW-w64.png)
 10. 现在终于可以在C语言中导入JLink_x64.dll这个库，并使用其中的内容了，但是这个DLL中具体有什么API可以使用呢？其中又有什么宏定义呢？请参考[JLinkSDK header](https://github.com/dihonglongxi/FactoryTestApp/tree/master/JLinkSDK)以及`UM08002`；
 11. 现在的问题就是如何利用这个DLL库文件实现需求？
-
+12. 由于在DLL库中一直没找到如何设置MCU，最终还是在上面链接2的基础上完善了一下功能。
+13. 目前的[pylink-rtt.py](./pylink-rtt.py)文件不仅可以给RTT日志加时间戳，还能将不同的RTT终端日志打印到不同的文件中。
+14. 生产的日志文件中，如果不需要时间戳可以通过正则表达式`\[[0-9 :.]{21}\] `匹配删除。
 
 ## 说明
 1. pylink的官方文档，以及其GitHub上的源码及例程，可以直接运行pylink-rtt用于RTT日志的收发；

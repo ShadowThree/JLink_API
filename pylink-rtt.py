@@ -26,9 +26,9 @@ def get_time(with_ms):
     """
     time = ""
     if with_ms:
-        time =  datetime.utcnow().strftime('%Y%m%d %H:%M:%S.%f')[:-3]   # "20230731 08:19:55.265"
+        time =  datetime.now().strftime('%Y%m%d %H:%M:%S.%f')[:-3]   # "20230731 08:19:55.265"
     else:
-        time =  datetime.utcnow().strftime('%Y%m%d_%H%M%S')             # "20230731_081955"
+        time =  datetime.now().strftime('%Y%m%d_%H%M%S')             # "20230731_081955"
     return time
 
 def RTT_read_string(link):
@@ -63,9 +63,9 @@ while True:
             idx = 0
             while idx < rtt_len:
                 try:
-                    if idx == 0 or rttOut[idx-1] == '\n':
-                        fp.write("[" + get_time(1) + "] ")
                     fp.write(rttOut[idx])
+                    if rttOut[idx] == '\n':
+                        fp.write("[" + get_time(1) + "] ")
                     idx += 1
                 except UnicodeEncodeError:        # 'ÿ' exception
                     fp.close()
